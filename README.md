@@ -26,9 +26,16 @@ Part 3: TMUX, Git & Debugging ([link](https://youtu.be/JN4Zbs0ypwM))
 | `<leader>s`       | Save file                                  |
 | `<leader>Q`       | Quit without saving                        |
 | `<leader>wq`      | Save and quit all buffers                  |
+| `n`               | Next search result (centered)              |
+| `N`               | Previous search result (centered)          |
+| `<C-d>`           | Half page down (centered)                  |
+| `<C-u>`           | Half page up (centered)                    |
 | `<C-h/j/k/l>`     | Move between windows                       |
 | `<C-Up/Down>`     | Increase/Decrease window height            |
 | `<C-Left/Right>`  | Increase/Decrease window width             |
+| `<`               | Indent left and reselect (visual mode)     |
+| `>`               | Indent right and reselect (visual mode)    |
+| `J`               | Join lines and keep cursor position        |
 | `<leader>tg`       | Toggle LazyGit                             |
 | `<leader>o`        | Toggle Symbols Outline                     |
 | `<leader>gg`       | Generate code (Gemini)                     |
