@@ -55,6 +55,44 @@ Example:
 export GOOGLE_API_KEY="your-api-key-here"
 ```
 
+## Language Server Installation
+
+To enable advanced language features like "go to definition," auto-completion, and diagnostics, you need to install the respective Language Servers (LSPs) for the languages you work with.
+
+**Prerequisites:**
+*   **Node.js & npm:** Many LSPs are distributed via `npm`. Ensure Node.js is installed (download from [nodejs.org](https://nodejs.org/)).
+*   **Python & pip:** For Python-related tools. Download from [python.org](https://www.python.org/).
+*   **Composer:** For PHP tools. (Optional, `npm` is also an option for `intelephense`).
+
+### Recommended LSP Installations:
+
+#### 1. `pyright` (for Python)
+```bash
+npm install -g pyright
+```
+
+#### 2. `intelephense` (for PHP)
+```bash
+npm install -g intelephense
+# Alternatively via Composer:
+# composer global require intelephense/intelephense
+```
+
+#### 3. `bashls` (for Bash/Shell)
+```bash
+npm install -g bash-language-server
+```
+
+#### 4. `ansiblels` (for Ansible)
+```bash
+npm install -g ansible-language-server
+# Alternatively via pip:
+# pip install 'ansible-language-server[ansible]'
+```
+
+**After Installation:**
+Restart Neovim. The LSP client should automatically detect and connect to the installed servers.
+
 ## Requires Neovim >= 0.11.3
 
 Please make sure you're on at least version **v0.11.3** of NeoVim.

@@ -14,6 +14,7 @@ require("servers.yamlls")(capabilities)
 require("servers.tailwindcss")(capabilities)
 require("servers.solidity_ls_nomicfoundation")(capabilities)
 require("servers.ansiblels")(capabilities)
+require("servers.intelephense")(capabilities)
 
 -- Linters & Formatters
 require("servers.efm-langserver")(capabilities)
@@ -32,5 +33,6 @@ vim.lsp.enable({
 	"tailwindcss",
 	"solidity_ls_nomicfoundation",
 	"ansiblels",
+	"intelephense", -- Added intelephense
 	"efm",
 })
