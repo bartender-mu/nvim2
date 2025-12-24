@@ -38,22 +38,17 @@ Part 3: TMUX, Git & Debugging ([link](https://youtu.be/JN4Zbs0ypwM))
 | `J`               | Join lines and keep cursor position        |
 | `<leader>tg`       | Toggle LazyGit                             |
 | `<leader>o`        | Toggle Symbols Outline                     |
-| `<leader>gg`       | Generate code (Gemini)                     |
-| `<leader>gc`       | Chat with Gemini                           |
-| `<leader>ge`       | Edit code with Gemini                      |
+| `<C-a>`            | Ask opencode (generate/chat)               |
+| `<C-x>`            | Execute opencode action (review/fix/etc.)  |
+| `<C-.>`            | Toggle opencode terminal                   |
 
 ## AI Integration
 
-This configuration uses `kiddos/gemini.nvim` to integrate with Google's Gemini models for AI-powered code generation and editing.
+This configuration uses `NickvanDyke/opencode.nvim` to integrate with opencode, an AI coding agent for research, reviews, and code tasks.
 
-To use this feature, you must:
-1. Obtain a Google AI API key.
-2. Set the `GOOGLE_API_KEY` environment variable in your shell configuration (e.g., `.bashrc`, `.zshrc`).
+To use this feature, ensure opencode CLI is installed (e.g., via `npm install -g opencode`). The plugin auto-connects to running opencode instances or manages one in Neovim's terminal. No API keys required.
 
-Example:
-```bash
-export GOOGLE_API_KEY="your-api-key-here"
-```
+For setup details, see the plugin's documentation at https://github.com/NickvanDyke/opencode.nvim.
 
 ## Language Server Installation
 

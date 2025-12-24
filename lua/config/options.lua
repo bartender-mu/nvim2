@@ -102,3 +102,22 @@ vim.opt.foldlevel = 99 -- Keep all folds open by default
 -- Split Behavior
 vim.opt.splitbelow = true -- Horizontal splits open below
 vim.opt.splitright = true -- Vertical splits open to the right
+
+-- Transparency Settings
+-- Enable full background transparency for the entire Neovim window
+vim.api.nvim_create_autocmd("ColorScheme", {
+  pattern = "*",
+  callback = function()
+    local transparent_groups = {
+      "Normal", "NormalFloat", "NonText", "EndOfBuffer", "LineNr", "SignColumn",
+      "VertSplit", "StatusLine", "StatusLineNC", "TabLine", "TabLineFill", "TabLineSel",
+      "Pmenu", "PmenuSel", "PmenuSbar", "PmenuThumb", "Folded", "FoldColumn",
+      "CursorLine", "CursorColumn", "ColorColumn", "QuickFixLine", "Search",
+      "IncSearch", "Visual", "VisualNOS", "MatchParen", "Error", "Warning",
+      "Info", "Hint", "FloatBorder", "Title"
+    }
+    for _, group in ipairs(transparent_groups) do
+      vim.cmd(string.format("hi %s guibg=NONE ctermbg=NONE", group))
+    end
+  end,
+})
