@@ -46,3 +46,9 @@ require("lazy").setup({
 	install = { colorscheme = { "tokyonight" } },
 	checker = { enabled = true },
 })
+
+-- Update package.path to include runtimepath for proper module loading in headless mode
+local rtps = vim.split(vim.o.rtp, ",")
+for _, rtp in ipairs(rtps) do
+  package.path = package.path .. ";" .. rtp .. "/lua/?.lua;" .. rtp .. "/lua/?/init.lua"
+end
